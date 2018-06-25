@@ -5,8 +5,9 @@
 {% block body %}
     {% for article in articles %}
         <article>
-            <p class="h2">{{ article.title  }}</p>
-            <p class="h3">{{ article.content }}</p>
+            <h2>{{ article.title  }}</h2>
+            <img src="{{ asset('build/images/arbre.jpg') }}" alt="" class="img-fluid img-thumbnail" />
+            <p class="text-justify">{{ article.content }}</p>
         </article>
     {% endfor %}
 {% endblock %}
