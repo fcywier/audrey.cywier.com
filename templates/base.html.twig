@@ -9,10 +9,22 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <div class="container-fluid">
-            {% block menu %}{% endblock %}
-            {% block body %}{% endblock %}
-        </div>
+        <main class="container-fluid">
+            <div class="row">
+                {% block header %}{% endblock %}
+            </div>
+            <div class="row">
+                <content class="col-9">
+                    {% block content %}{% endblock %}
+                </content>
+                <menu class="col-3">
+                    {% block menu %}{% endblock %}
+                </menu>
+            </div>
+            <div class="row">
+                {% block footer %}{% endblock %}
+            </div>
+        </main>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
